@@ -1,3 +1,6 @@
+from django.contrib import admin
+from django.urls import path, include
+
 """
 URL configuration for weatherdetector project.
 
@@ -19,5 +22,5 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('weather/', include('weather.urls')),
+    path('', include('weather.urls')),
 ]

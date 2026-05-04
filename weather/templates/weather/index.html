@@ -1,0 +1,27 @@
+{% extends 'weather/layout.html' %}
+
+{% block content %}
+  <center class="row">
+    <form action="" method="post" class="col-md-6 col-md-offset-3">
+      {% csrf_token %}
+      <div class="input-group">
+        <input type="text" class="form-control" name="city" placeholder="Search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            Search
+          </button>
+        </div>
+        <form>
+  </center>
+  <hr>
+  <div class="card row" style="align-items: center; justify-content: center; display: flex; margin-top: 20px;">
+    <div class="col-md-6 col-md-offset-3">
+      <h1>{{context.city}}</h1>
+      <h3>country code : {{data.country_code}}</h1>
+        <h5>coordinate : {{data.coordinate}}</h5>
+        <h5>temp : {{data.temp}}</h5>
+        <h5>pressure : {{data.pressure}} </h5>
+        <h5>humidity : {{data.humidity}}</h5>
+    </div>
+  </div>
+{% endblock %}
