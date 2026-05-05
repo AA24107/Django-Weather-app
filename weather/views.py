@@ -9,11 +9,12 @@ def index(request):
         city = request.POST.get('city')
         req = urllib.request.urlopen('https://api.openweathermap.org/data/2.5/weather?q=' +city+ '&appid=685cc9e89c1734c32384a424251c55a0').read()
         json_data = json.loads(req)
+        temp = json_data['main']['temp'] - 273.15
         data = {
             'country_code': str(json_data['sys']['country']),
             'city': city,
             'coordinate': str(json_data['coord']['lon']) + ' ' + str(json_data['coord']['lat']),
-            'temp': str(json_data['main']['temp']),
+            'temp': str(round(temp, 2)) + ' °C',
             'pressure': str(json_data['main']['pressure']),
             'humidity': str(json_data['main']['humidity']),
         }
