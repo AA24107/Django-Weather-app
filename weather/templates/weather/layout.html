@@ -7,14 +7,16 @@
     <title>Weather Detector</title>
 </head>
 <body>
-    <nav class="row" style="background: grey; color: white;">
-        <div align="center"><h1 class="col-md-3 text-center">Weather Detector</h1></div>
-    </nav>
-    <br />
-    <br />
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
+    <div class="container-fluid">
+        <nav class="row" style="background: grey; color: white;">
+            <div align="center"><h1 class="col-md-3 text-center">Weather Detector</h1></div>
+        </nav>
+        <br />
+        <br />
+        <div class="row">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
 </body>
 </html>

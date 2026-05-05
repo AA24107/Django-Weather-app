@@ -13,15 +13,24 @@
         </div>
         <form>
   </center>
-  <hr>
-  <div class="card row" style="align-items: center; justify-content: center; display: flex; margin-top: 20px;">
-    <div class="col-md-6 col-md-offset-3">
-      <h1>{{data.city}}</h1>
-      <h2>country code : {{data.country_code}}</h2>
-        <h3>coordinate : {{data.coordinate}}</h3>
-        <h3>temperature : {{data.temp}}</h3>
-        <h3>pressure : {{data.pressure}} </h3>
-        <h3>humidity : {{data.humidity}}</h3>
-    </div>
+  <div align="center" class="row" style="color: red; text-align:center; font-size: 30px; background-color: rgb(248, 179, 179);">
+    {% if error %}
+    <p>{{ error }}</p>
+    {% endif %}
   </div>
+    <hr>
+<div class="card" style="max-width: 500px; margin: 40px auto; padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+  {% if data %}
+    <h1 style="text-transform: capitalize;">{{ data.city }}</h1>
+    <h3 style="text-transform: capitalize;">{{ data.description }}</h3>
+
+    <hr>
+
+    <p><strong>Country:</strong> {{ data.country_code }}</p>
+    <p><strong>Coordinates:</strong> {{ data.coordinate }}</p>
+    <p><strong>Temperature:</strong> {{ data.temp }}</p>
+    <p><strong>Pressure:</strong> {{ data.pressure }}</p>
+    <p><strong>Humidity:</strong> {{ data.humidity }}</p>
+  {% endif %}
+</div>
 {% endblock %}
