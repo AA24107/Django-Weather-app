@@ -104,6 +104,14 @@ http://127.0.0.1:8000/
 
 ---
 
+## Screenshots
+
+![image 1](image.png)
+
+![image 2](image-1.png)
+
+---
+
 ## Notes
 
 This project was built as part of learning backend development and API integration.

@@ -19,18 +19,18 @@
     {% endif %}
   </div>
     <hr>
-<div class="card" style="max-width: 500px; margin: 40px auto; padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-  {% if data %}
-    <h1 style="text-transform: capitalize;">{{ data.city }}</h1>
-    <h3 style="text-transform: capitalize;">{{ data.description }}</h3>
+  <div class="card" style="max-width: 500px; margin: 40px auto; padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+    {% if data %}
+      <h1 style="text-transform: capitalize;">{{ data.city }}</h1>
+      <h3 style="text-transform: capitalize;">{{ data.description }}</h3>
 
-    <hr>
+      <hr>
 
-    <p><strong>Country:</strong> {{ data.country_code }}</p>
-    <p><strong>Coordinates:</strong> {{ data.coordinate }}</p>
-    <p><strong>Temperature:</strong> {{ data.temp }}</p>
-    <p><strong>Pressure:</strong> {{ data.pressure }}</p>
-    <p><strong>Humidity:</strong> {{ data.humidity }}</p>
-  {% endif %}
-</div>
+      <p><strong>Country:</strong> {{ data.country_code }}</p>
+      <p><strong>Coordinates:</strong> {{ data.coordinate }}</p>
+      <p><strong>Temperature:</strong> {{ data.temp }}</p>
+      <p><strong>Pressure:</strong> {{ data.pressure }}</p>
+      <p><strong>Humidity:</strong> {{ data.humidity }}</p>
+    {% endif %}
+  </div>
 {% endblock %}
